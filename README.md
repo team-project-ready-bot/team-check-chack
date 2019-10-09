@@ -1,2 +1,4 @@
 # team-check-chack
-쵁쵁팀 organization git
+team : check-check 
+project files  
+telegram_practice.py -> main
