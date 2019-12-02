@@ -1,4 +1,35 @@
-# team-check-chack
-team : check-check 
-project files  
-telegram_practice.py -> main
+# 서울 인공지능 챗봇톤 
+ - 2019년 10월 9일 
+ - Team name : Check-Check
+![image](https://user-images.githubusercontent.com/54701846/69939421-26f74780-1523-11ea-870a-956872270cc7.png)
+
+
+# 주제 : 카카오톡 다산 120 직접 질문하기 부분을 보완한 챗봇
+ - 카카오톡 다산 120 챗봇의 직접 질문하기를 실행할 경우 모르는 질문에 대해 제대로 된 대답을 하지 못하고 답변을 찾지 못했어요로 넘어감  
+ - 이를 보완해주는 챗봇을 만들면 어떨까 하는 아이디어  
+ ![image](https://user-images.githubusercontent.com/54701846/69940135-daad0700-1524-11ea-9df2-51d40d96eaaf.png)
+
+## 챗봇 페르소나 
+ - '그것이 알고싶다' 의 김상중 말투 
+ - '다 알려주다' '다 알고싶다' 라는 중의적 의미를 가진 이름으로 '다알'
+
+## 정보 수집 : [서울정보소통광장](https://opengov.seoul.go.kr/civilappeal) FAQ 크롤링
+
+## 정보 가공 : TF-IDF 알고리즘을 이용 
+ - 정보 별 분야에 따른 분류를 위해 분야와 제목의 주요 단어를 가지고 분류 
+ - 저장된 정보를 pickle 파일로 저장
+ 
+## 사용자 입력 부분 : 똑같은 TF-IDF를 이용 사용자의 Intent를 파악
+ - 저장된 FAQ 정보와 사용자 입력의 Intent의 유사도를 통해 가장 비슷한 답변을 찾아 3개의 list로 보여줌
+![image](https://user-images.githubusercontent.com/54701846/69943360-a4718680-1528-11ea-8ae3-edfb61d9dd99.png)
+
+## 서버 연동
+ - Heroku 사용
+ - ngrok으로 사용하려 했으나 대회 시연 시 여러 사람이 접속 할 경우 서버가 터지는 문제 때문에 사용하지 않음
+ 
+# 결과
+ - 대회 2등 우수상 수상  
+
+# 부족한 점 
+ - 데이터의 부족 문제로 여전히 답변하지 못하는 질문들이 있음 
+ - 뜬금없는 질문이 나왔을 경우에 뜬금없는 답변을 찾아줌
